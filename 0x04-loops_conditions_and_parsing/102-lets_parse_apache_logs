@@ -3,4 +3,4 @@
 # and HTTP status code from the Apache log file
 
 myfile="apache-access.log"
-awk -F' ' '{ print $1, $9}' $myfile | sort | uniq -c|sort -nr
+awk -F' ' '{ print $1, $9}' $myfile
