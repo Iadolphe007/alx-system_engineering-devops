@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 # use kill to stop the process
 
-pid=$(grep '4-to_infinity_and_beyond')
-
-if [ -n "$pid" ]
-then
-	kill "$pid"
-fi
+kill "$(pgrep -f 4-to_infinity_and_beyond)"
