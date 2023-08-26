@@ -29,10 +29,11 @@
   handle read requests, such as searches or document retrieval</p>
   <br>
 
-  ISSUES
-SPOF
+ <h1><strong>ISSUES</strong></h1>
+<h3><strong>SPOF</strong><h3>
 the points of failure are that having pne server that contains only one Web, APP server and database A SPOF is a part of system that if it fails all the entinre system will stop working
-<h3><strong>Security issues (no firewall, no HTTPS)</strong></h3>
+<br>
+  <h3><strong>Security issues (no firewall, no HTTPS)</strong></h3>
 <p> A firewall acts as a protective barrier between a computer network and potential threats from the internet. Without a firewall, unauthorized access, malicious attacks, and data breaches become more likely, putting sensitive information at risk.</p>
 <p>HTTPS (Hypertext Transfer Protocol Secure) encrypts data transmitted between a user's browser and a website's server. Without HTTPS, data exchanged, such as login credentials and personal information, can be intercepted by attackers, leading to privacy breaches and potential misuse.</p>
 
