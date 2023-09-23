@@ -1,0 +1,9 @@
+# connecting to the server withot typing password
+# client conf with ~/.ssh/school
+# refuse password authentication
+
+Host *
+	HostName 35.174.184.134
+	User 	ubuntu
+	IdentifyFile ~/.ssh/school
+	PasswordAuthentication no
