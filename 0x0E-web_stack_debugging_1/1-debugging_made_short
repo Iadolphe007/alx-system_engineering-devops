@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# configuring nginx by creating symbolic link
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service start nginx start
+kill "$(pgrep 'nginx' | head -l)"
