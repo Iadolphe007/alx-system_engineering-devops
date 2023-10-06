@@ -38,9 +38,11 @@ defaults
 frontend www-https
         mode http
         bind *:80
+        default_backend webserver
         http-request redirect scheme https code 301 unless { ssl_fc }
         bind *:443 ssl crt /etc/haproxy/certs/www.adolim.tech.pem
         default_backend webserver
+
 backend webserver
     balance roundrobin
     server 320820-web-01 52.86.110.104 check
