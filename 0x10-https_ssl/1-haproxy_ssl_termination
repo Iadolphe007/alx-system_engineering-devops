@@ -40,9 +40,7 @@ default_backend web_backend
 
 frontend web_frontend
         bind *:443 ssl crt /etc/haproxy/certs/www.adolim.tech.pem
-        http-request set-header X-Forwarded-Proto http
         default_backend webserver
-
 backend web_backend
 balance roundrobin
 server 320820-web-01 52.86.110.104 check
