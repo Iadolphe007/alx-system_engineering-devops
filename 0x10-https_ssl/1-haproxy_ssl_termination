@@ -1,4 +1,5 @@
-global
+
+bal
         log /dev/log    local0
         log /dev/log    local1 notice
         chroot /var/lib/haproxy
@@ -35,13 +36,12 @@ defaults
 
 frontend web_frontend
 bind *:80
-mode http
-default_backend web_backend
+bind *:443 ssl crt /etc/haproxy/certs/www.adolim.tech.pem
+redirect scheme https code 301 if !{ ssl_fc }
+default_backend webserver
 
-frontend web_frontend
-        bind *:443 ssl crt /etc/haproxy/certs/www.adolim.tech.pem
-        default_backend webserver
 backend web_backend
 balance roundrobin
-server 320820-web-01 52.86.110.104 check
-server 320820-web-02 34.204.95.100 check
+mode http
+server 320820-web-01 52.86.110.104:80 check
+server 320820-web-02 34.204.95.100:80 check

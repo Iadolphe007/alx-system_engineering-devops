@@ -1,4 +1,4 @@
-                                           File: /etc/haproxy/haproxy.cfg                                                                                                           
+                                           File: /etc/haproxy/haproxy.cfg
 
 global
         log /dev/log    local0
@@ -36,14 +36,12 @@ defaults
 
 
 frontend www-https
-        mode http
         bind *:80
-        default_backend webserver
-        http-request redirect scheme https code 301 unless { ssl_fc }
         bind *:443 ssl crt /etc/haproxy/certs/www.adolim.tech.pem
+        http-request redirect scheme https code 301 unless { ssl_fc }
         default_backend webserver
 
 backend webserver
     balance roundrobin
-    server 320820-web-01 52.86.110.104 check
-    server 320820-web-02 34.204.95.100 check
+    server 320820-web-01 52.86.110.104:80 check
+    server 320820-web-02 34.204.95.100:80 check
