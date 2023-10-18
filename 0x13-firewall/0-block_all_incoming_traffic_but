@@ -1,0 +1,15 @@
+# installing ufw
+# allowing some ssh, http and https connection
+
+sudo apt update
+sudo apt install ufw
+sudo ufw status
+sudo ufw disable
+sudo ufw reset
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo systemctl stop ufw
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+sudo ufw enable
