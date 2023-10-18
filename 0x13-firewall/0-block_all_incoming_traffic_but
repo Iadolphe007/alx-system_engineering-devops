@@ -1,5 +1,6 @@
 # installing ufw
-# allowing some ssh, http and https connection
+# setting up rule 
+# allow ssh, http and https connection
 
 sudo apt update
 sudo apt install ufw
