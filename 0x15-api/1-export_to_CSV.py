@@ -13,7 +13,7 @@ if __name__ == "__main__":
     user = requests.get(url + "users/{}".
                         format(userId), verify=False).json()
     todo = requests.get(url + "todos?userId={}".
-                            format(userId), verify=False).json()
+                        format(userId), verify=False).json()
     with open("{}.csv".format(userId), 'w', newline='') as csvfile:
         my_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in todo:
