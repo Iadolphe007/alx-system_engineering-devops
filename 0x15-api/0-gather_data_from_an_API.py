@@ -1,11 +1,6 @@
 #!/usr/bin/python3
 """return indromation about employers todo list"""
 
-
-#!/usr/bin/python3
-"""return indromation about employers todo list"""
-
-
 import requests
 import sys
 
