@@ -8,12 +8,11 @@ import sys
 
 if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
-    url_user = url + "users/{}".format(sys.argv[1])
-    url_todo = url + "todos"
-    user_id = sys.argv[1]
-    params = {"userId": user_id}
-    user = requests.get(url=url_user).json()
-    todos = requests.get(url=url_todo, params=params).json()
+    id_url = "users/{}".format(sys.argv[1])
+    url_todo = "todos"
+    params = {"userId": sys.argv[1]}
+    user = requests.get(url + id_url).json()
+    todos = requests.get(url + url_todo, params=params).json()
     completed = []
 
     for todo in todos:
