@@ -12,7 +12,7 @@
 <p><strong>9:15 AM: </strong>The engineering team immediately began investigating the issue. Initially, the assumption was that this was a DDoS attack, but after reviewing the logs, it was confirmed to be a legitimate partner integration</p>
 <p><strong>10:00 AM: </strong>Initially, it was suspected that a DDoS attack might be underway, but further analysis revealed that the high request rate was from a legitimate partner integration</p>
 <p><strong>10:15 AM: </strong>The incident was escalated to the development team and the partner integration team to address the rate limit issue.</p>
-<p><strong>11:00 AM: </strong>The rate limit issue was resolved by adjusting the API rate limits, and the API service was restored by 11:30 AM.</p>
+<p><strong>11:00 AM: </strong>The rate limit issue was resolved by adjusting the API rate limits, and the API service was restored by 11:00 AM.</p>
 
 
 <h4>Root Cause and Resolution:</h4>
