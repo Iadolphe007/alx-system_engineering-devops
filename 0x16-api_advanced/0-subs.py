@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """queries Reddit API abd returns numbers of subscribers"""
 
-import requests
-
 
 def number_of_subscribers(subreddit):
     """queries Reddit API abd returns numbers of subscribers"""
+    import requests
 
     if subreddit is None or subreddit is not isinstance(subreddit, str):
         return 0
