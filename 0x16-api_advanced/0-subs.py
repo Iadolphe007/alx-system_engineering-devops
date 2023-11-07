@@ -3,6 +3,7 @@
 
 import requests
 
+
 def number_of_subscribers(subreddit):
     """queries Reddit API abd returns numbers of subscribers"""
 
